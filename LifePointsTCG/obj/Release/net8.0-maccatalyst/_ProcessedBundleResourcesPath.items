@@ -1,16 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\poison.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\background.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\dadobutton.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\cruz.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\evolution.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\change.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\diez.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\lp.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
-    <BundleResource Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

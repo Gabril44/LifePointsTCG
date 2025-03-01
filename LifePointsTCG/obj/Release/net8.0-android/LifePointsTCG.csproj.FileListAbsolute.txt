@@ -31,7 +31,8 @@ C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-androi
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\dadobutton.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\poison.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\background.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_round.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-xxhdpi\appicon_round.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-xhdpi\appicon_round.png
@@ -54,13 +55,12 @@ C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-androi
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-xhdpi\appicon_background.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-hdpi\appicon_background.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\mipmap-mdpi\appicon_background.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\evolution.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\diez.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\cruz.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\change.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\background.png
-C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\poison.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\dadobutton.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\evolution.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\lp.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\diez.png
+C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\resizetizer\r\drawable\change.png
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\mauiimage.stamp
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\mauiimage.outputs
 C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Release\net8.0-android\libraryprojectimports.cache
