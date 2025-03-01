@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LifePointsTCG.Welcome"
+             BackgroundColor="FloralWhite"
+             Title="Welcome">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label x:Name="TitleLabel"
+               Text="Bienvenido al Life Points Counter TCG"
+               FontSize="30"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="DarkOliveGreen"
+               FontFamily="Georgia"
+               Opacity="0" 
+               VerticalOptions="CenterAndExpand"/>
+
+        <!-- Agregamos la nueva frase -->
+        <Label x:Name="PhraseLabel"
+               Text="¡Ajusta la vida de tu monstruo, prepárate y empieza el combate!"
+               FontSize="18"
+               HorizontalOptions="Center"
+               TextColor="DarkOliveGreen"
+               FontFamily="Georgia"
+               Opacity="0" 
+               VerticalOptions="CenterAndExpand"/>
+
+        <!-- Frame para Entry con bordes redondeados -->
+        <Frame BackgroundColor="Wheat"
+               Padding="5"
+               CornerRadius="10"
+               HasShadow="False"
+               VerticalOptions="Center">
+            <Entry x:Name="VidaEntry"
+                   Placeholder="Ingrese la vida de su monstruo"
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   WidthRequest="250"
+                   HeightRequest="40"
+                   TextColor="Black"
+                   FontSize="18"
+                   FontFamily="Georgia"
+                   Opacity="0"/>
+        </Frame>
+
+        <!-- Frame para Button con bordes redondeados -->
+        <Frame BackgroundColor="DarkOliveGreen"
+               Padding="10"
+               CornerRadius="25"
+               HasShadow="False"
+               VerticalOptions="Center">
+            <Button x:Name="StartButton"
+                    Text="Iniciar"
+                    Clicked="OnStartClicked"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    HeightRequest="50"
+                    WidthRequest="200"
+                    FontSize="20"
+                    FontFamily="Georgia"
+                    Opacity="0"
+                    Margin="0,20"/>
+        </Frame>
+
+        <Label
+                Text="Deveoped with ❤️ by Leshuggah"
+                TextColor="DarkOliveGreen"
+                FontSize="11"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+    </VerticalStackLayout>
+</ContentPage>
