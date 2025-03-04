@@ -121,6 +121,58 @@
             }
         }
 
+        private async void ChangeQuick()
+        {
+            // Generar dinámicamente las opciones
+            List<string> options = new List<string>();
+            Dictionary<string, int> optionMap = new Dictionary<string, int>(); // Mapeo de opciones a índices
+
+            for (int i = 0; i < bench.Count; i++)
+            {
+                if (bench[i].exists && bench[i].vida > 0)
+                {
+                    string optionText = $"Bench: {i + 1} LP: {bench[i].vida}";
+                    options.Add(optionText);
+                    optionMap[optionText] = i; // Guardar índice real
+                }
+            }
+            if (options.Count < 1)
+            {
+                await DisplayAlert("Ya no tienes monstruos!", "No hay ningun monstruo en la bench para elegir :(", "Aceptar");
+                await Navigation.PushAsync(new Welcome());
+
+            }
+            else
+            {// Mostrar el ActionSheet con las opciones generadas
+                var action = await DisplayActionSheet("Selecciona un Monstruo para poner al frente", "Cancel", null, options.ToArray());
+
+                if (action != "Cancel" && optionMap.ContainsKey(action))
+                {
+                    int selectedIndex = optionMap[action]; // Recuperar el índice real
+
+                    switch (selectedIndex)
+                    {
+                        case 0: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 1", "Aceptar"); Bench1.SendClicked(); break;
+                        case 1: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 2", "Aceptar"); Bench2.SendClicked(); break;
+                        case 2: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 3", "Aceptar"); Bench3.SendClicked(); break;
+                        case 3: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 4", "Aceptar"); Bench4.SendClicked(); break;
+                        case 4: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 5", "Aceptar"); Bench5.SendClicked(); break;
+                        case 5: await DisplayAlert("Test", "El monstruo de la bench que debe seguir es: 6", "Aceptar"); Bench6.SendClicked(); break;
+                        default: await DisplayAlert("Error", "Selección no válida", "Aceptar"); break;
+                    }
+                }
+                else
+                {
+                    // El usuario seleccionó "Cancel" o algo no válido
+                    await DisplayAlert("Aviso", "No seleccionaste un número válido.", "Aceptar");
+                }
+            }
+
+            
+        }
+
+
+
         private async void OnDamageButtonClicked(object sender, EventArgs e)
         {
             // Animar el Grid o BoxView
@@ -182,10 +234,40 @@
                     // Actualiza la etiqueta de la vida
                     LifeLabel.Text = $"{(int)newLife}";
                     audioPlayerService.Play();
+                    // Oscurece el monstruo
+                    await MonsterImage.FadeTo(0.3, 200);
+
+                    // Vibración: mueve la imagen rápidamente de un lado a otro
+                    for (int j = 0; j < 5; j++)
+                    {
+                        await MonsterImage.TranslateTo(-5, 0, 50);
+                        await MonsterImage.TranslateTo(5, 0, 50);
+                    }
+
+                    // Vuelve la imagen a su posición original
+                    await MonsterImage.TranslateTo(0, 0, 50);
+
+                    // Mantiene el efecto de daño por 1 segundo
+                    await Task.Delay(1000);
+
+                    // Vuelve a la normalidad
+                    await MonsterImage.FadeTo(1, 200);
 
                     if (newLife <= 0.01)
                     {
-                        await DisplayAlert("Game Over", "¡Te has quedado sin vida!", "Aceptar");
+                        await DisplayAlert("No puede continuar!", "¡Este monstruo se ha quedado sin vida!", "Aceptar");
+                        ChangeQuick();
+                        bench[monstruoActual].exists = false;
+                        switch (monstruoActual) 
+                        {
+                            case 0:Bench1.BackgroundColor = Colors.Transparent; break;
+                            case 1: Bench2.BackgroundColor = Colors.Transparent; break;
+                            case 2: Bench3.BackgroundColor = Colors.Transparent; break;
+                            case 3: Bench4.BackgroundColor = Colors.Transparent; break;
+                            case 4: Bench5.BackgroundColor = Colors.Transparent; break;
+                            case 5: Bench6.BackgroundColor = Colors.Transparent; break;
+                        }
+
                     }
                     UpdateHealthBarColor();
                 }
@@ -229,45 +311,55 @@
                 await button.ScaleTo(0.9, 100); // Reducir tamaño temporalmente
                 await button.ScaleTo(originalScale, 100); // Volver al tamaño original
             }
-            var action = await DisplayActionSheet("Selecciona cuánto curar", "Cancelar", null, "20", "30","40", "50", "Custom...");
 
-            if (action == "Cancelar" || string.IsNullOrEmpty(action))
-                return;
-
-            int healAmount = 0;
-
-            if (action == "Custom...")
+            if (bench[monstruoActual].vida < 1) 
             {
-                string result = await DisplayPromptAsync("Curación Personalizada", "Ingresa la cantidad a curar:", "OK", "Cancelar", "Ej: 25", keyboard: Keyboard.Numeric);
+                await DisplayAlert("No se puede!", "Tu monstruo ya no puede continuar!", "Aceptar");
+            }
+            else
+            {
+                var action = await DisplayActionSheet("Selecciona cuánto curar", "Cancelar", null, "20", "30", "40", "50", "Custom...");
 
-                if (!int.TryParse(result, out healAmount) || healAmount <= 0)
-                {
-                    await DisplayAlert("Error", "Ingresa un número válido.", "Aceptar");
+                if (action == "Cancelar" || string.IsNullOrEmpty(action))
                     return;
-                }
-            }
-            else if (int.TryParse(action, out int predefinedHeal))
-            {
-                healAmount = predefinedHeal;
-            }
 
-            for (int i = 0; i < bench.Count; i++)
-            {
-                if (i == monstruoActual)
+                int healAmount = 0;
+
+                if (action == "Custom...")
                 {
-                    bench[i].vida += healAmount;
-                    bench[i].damageRecived -= healAmount;
-                    double currentLife = HealthBar.Progress * bench[monstruoActual].vida_original;
-                    double newLife = Math.Min(currentLife + healAmount, bench[monstruoActual].vida_original);
+                    string result = await DisplayPromptAsync("Curación Personalizada", "Ingresa la cantidad a curar:", "OK", "Cancelar", "Ej: 25", keyboard: Keyboard.Numeric);
 
-                    HealthBar.Progress = newLife / bench[monstruoActual].vida_original;
-                    LifeLabel.Text = $"{(int)newLife}";
+                    if (!int.TryParse(result, out healAmount) || healAmount <= 0)
+                    {
+                        await DisplayAlert("Error", "Ingresa un número válido.", "Aceptar");
+                        return;
+                    }
+                }
+                else if (int.TryParse(action, out int predefinedHeal))
+                {
+                    healAmount = predefinedHeal;
+                }
 
-                    await DisplayAlert("Vida", $"Curaste {healAmount} puntos de vida. Life Points: {LifeLabel.Text}", "Aceptar");
-                    healsound.Play();
-                    UpdateHealthBarColor();
+                for (int i = 0; i < bench.Count; i++)
+                {
+                    if (i == monstruoActual)
+                    {
+                        bench[i].vida += healAmount;
+                        bench[i].damageRecived -= healAmount;
+                        double currentLife = HealthBar.Progress * bench[monstruoActual].vida_original;
+                        double newLife = Math.Min(currentLife + healAmount, bench[monstruoActual].vida_original);
+
+                        HealthBar.Progress = newLife / bench[monstruoActual].vida_original;
+                        LifeLabel.Text = $"{(int)newLife}";
+
+                        await DisplayAlert("Vida", $"Curaste {healAmount} puntos de vida. Life Points: {LifeLabel.Text}", "Aceptar");
+                        healsound.Play();
+                        UpdateHealthBarColor();
+                    }
                 }
             }
+
+
 
         }
 
@@ -280,6 +372,8 @@
                 await button.ScaleTo(0.9, 100); // Reducir tamaño temporalmente
                 await button.ScaleTo(originalScale, 100); // Volver al tamaño original
             }
+
+
             string result = await DisplayPromptAsync("Evolución", "Ingrese la vida máxima de la evolución:", "OK", "Cancel", "Ej: 120", keyboard: Keyboard.Numeric);
 
             if (int.TryParse(result, out int nuevaVidaMaxima) && nuevaVidaMaxima > 0)
@@ -292,6 +386,25 @@
 
                 await DisplayAlert("Evolución!", $"Tu Pokémon ha evolucionado. Nueva vida: {vidaActual}/{nuevaVidaMaxima}", "Aceptar");
                 evolution.Play();
+
+                // Animación de desvanecimiento
+                await MonsterImage.FadeTo(0, 300);
+                await MonsterImage.ScaleTo(0.8, 300); // Se hace un poco más pequeño
+
+                if (bench[monstruoActual].evolutionState == 0)
+                {
+                    MonsterImage.Source = "secondmonster.png";
+                    bench[monstruoActual].evolutionState = 1;
+                } else if(bench[monstruoActual].evolutionState == 1) 
+                {
+                    MonsterImage.Source = "thirdmonster.png";
+                    bench[monstruoActual].evolutionState = 2;
+                }
+
+                // Animación de aparición con escala de impacto
+                await MonsterImage.ScaleTo(1.2, 300); // Se agranda un poco
+                await MonsterImage.FadeTo(1, 300);
+                await MonsterImage.ScaleTo(1.0, 200); // Vuelve a su tamaño normal
             }
             else
             {
@@ -300,6 +413,17 @@
 
             UpdateHealthBarColor();
             LiberarMonstruo();
+
+        }
+
+        private void TestEvolution() 
+        {
+            switch (bench[monstruoActual].evolutionState) 
+            {
+                case 0: MonsterImage.Source = "firstmonster.png"; break;
+                case 1: MonsterImage.Source = "secondmonster.png"; break;
+                case 2: MonsterImage.Source = "thirdmonster.png"; break;
+            }
         }
 
         private async void ClickedBench3(object sender, EventArgs e)
@@ -362,6 +486,7 @@
 
                 monstruoActual = 2;
                 ActualizarBotonSeleccionado();
+                TestEvolution();
             }
         }
         private async void ClickedBench2(object sender, EventArgs e)
@@ -426,6 +551,7 @@
                 monstruoActual = 1;
                 ActualizarBotonSeleccionado();
                 //Bench2.BackgroundColor = Colors.Grey;
+                TestEvolution();
             }
         }
 
@@ -448,7 +574,25 @@
                 // Restaurar el color original
                 button.BackgroundColor = originalColor;
             }
-            if (bench[0].exists == true)
+
+            if (bench[0].exists == false)
+            {
+                string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
+
+                if (!int.TryParse(result, out int newLife) || newLife <= 0)
+                {
+                    await DisplayAlert("Error", "Ingresa un número válido.", "Aceptar");
+                    return;
+                }
+
+                Monster newMonster = new Monster(newLife);
+                await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
+                bench[0] = newMonster;
+                bench[0].exists = true;
+                Bench1.BackgroundColor = Colors.Red;
+                ActualizarBotonSeleccionado();
+            } 
+            else if (bench[0].exists == true)
             {
                 LiberarMonstruo();
                 // Obtener la vida original del monstruo en bench[1]
@@ -476,6 +620,7 @@
                 monstruoActual = 0;
                 ActualizarBotonSeleccionado();
                 //Bench1.BackgroundColor = Colors.Grey;
+                TestEvolution();
             }
         }
         private async void ClickedBench4(object sender, EventArgs e)
@@ -540,6 +685,7 @@
                 monstruoActual = 3;
                 ActualizarBotonSeleccionado();
                 //Bench4.BackgroundColor = Colors.Grey;
+                TestEvolution();
             }
         }
         private async void ClickedBench5(object sender, EventArgs e)
@@ -604,6 +750,7 @@
                 monstruoActual = 4;
                 ActualizarBotonSeleccionado();
                 //Bench5.BackgroundColor = Colors.Grey;
+                TestEvolution();
             }
         }
         private async void ClickedBench6(object sender, EventArgs e)
@@ -670,6 +817,7 @@
                 monstruoActual = 5;
                 ActualizarBotonSeleccionado();
                 //Bench6.BackgroundColor = Colors.Grey;
+                TestEvolution();
             }
         }
 
@@ -1004,5 +1152,6 @@
             }
             ApplyDamage(30);
         }
+
     }
 }

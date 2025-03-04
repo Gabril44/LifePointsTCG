@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-01T05:43:41.594</Modified>
+      <Modified>2025-03-04T02:45:44.821</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-03-01T05:41:02.151</Modified>
+      <Modified>2025-03-02T23:08:40.787</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LifePointsTCG.runtimeconfig.json">
       <PackagePath>LifePointsTCG.runtimeconfig.json</PackagePath>
-      <Modified>2025-03-01T05:41:01.895</Modified>
+      <Modified>2025-03-02T20:34:50.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LifePointsTCG.dll">
       <PackagePath>LifePointsTCG.dll</PackagePath>
-      <Modified>2025-03-01T05:43:41.248</Modified>
+      <Modified>2025-03-04T02:45:44.445</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>LifePointsTCG.exe</PackagePath>
-      <Modified>2025-03-01T05:43:41.252</Modified>
+      <Modified>2025-03-04T02:45:44.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -95,243 +95,255 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2025-02-25T22:57:33.210</Modified>
+      <Modified>2025-03-02T23:07:23.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.197</Modified>
+      <Modified>2025-03-02T23:07:23.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.197</Modified>
+      <Modified>2025-03-02T23:07:23.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.197</Modified>
+      <Modified>2025-03-02T23:07:23.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.196</Modified>
+      <Modified>2025-03-02T23:07:23.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.196</Modified>
+      <Modified>2025-03-02T23:07:23.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.204</Modified>
+      <Modified>2025-03-02T23:07:23.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.204</Modified>
+      <Modified>2025-03-02T23:07:23.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.203</Modified>
+      <Modified>2025-03-02T23:07:23.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.204</Modified>
+      <Modified>2025-03-02T23:07:23.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.204</Modified>
+      <Modified>2025-03-02T23:07:23.826</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.206</Modified>
+      <Modified>2025-03-02T23:07:23.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.206</Modified>
+      <Modified>2025-03-02T23:07:23.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.205</Modified>
+      <Modified>2025-03-02T23:07:23.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.205</Modified>
+      <Modified>2025-03-02T23:07:23.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.205</Modified>
+      <Modified>2025-03-02T23:07:23.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.210</Modified>
+      <Modified>2025-03-02T23:07:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.209</Modified>
+      <Modified>2025-03-02T23:07:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.209</Modified>
+      <Modified>2025-03-02T23:07:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.209</Modified>
+      <Modified>2025-03-02T23:07:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.208</Modified>
+      <Modified>2025-03-02T23:07:23.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.208</Modified>
+      <Modified>2025-03-02T23:07:23.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.207</Modified>
+      <Modified>2025-03-02T23:07:23.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.206</Modified>
+      <Modified>2025-03-02T23:07:23.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.207</Modified>
+      <Modified>2025-03-02T23:07:23.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.207</Modified>
+      <Modified>2025-03-02T23:07:23.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.200</Modified>
+      <Modified>2025-03-02T23:07:23.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.200</Modified>
+      <Modified>2025-03-02T23:07:23.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.200</Modified>
+      <Modified>2025-03-02T23:07:23.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.199</Modified>
+      <Modified>2025-03-02T23:07:23.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.199</Modified>
+      <Modified>2025-03-02T23:07:23.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.202</Modified>
+      <Modified>2025-03-02T23:07:23.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.202</Modified>
+      <Modified>2025-03-02T23:07:23.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.201</Modified>
+      <Modified>2025-03-02T23:07:23.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.201</Modified>
+      <Modified>2025-03-02T23:07:23.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.200</Modified>
+      <Modified>2025-03-02T23:07:23.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.203</Modified>
+      <Modified>2025-03-02T23:07:23.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.203</Modified>
+      <Modified>2025-03-02T23:07:23.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.203</Modified>
+      <Modified>2025-03-02T23:07:23.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.202</Modified>
+      <Modified>2025-03-02T23:07:23.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.202</Modified>
+      <Modified>2025-03-02T23:07:23.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.199</Modified>
+      <Modified>2025-03-02T23:07:23.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.199</Modified>
+      <Modified>2025-03-02T23:07:23.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.198</Modified>
+      <Modified>2025-03-02T23:07:23.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.198</Modified>
+      <Modified>2025-03-02T23:07:23.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.198</Modified>
+      <Modified>2025-03-02T23:07:23.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\background.scale-100.png">
       <PackagePath>background.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.211</Modified>
+      <Modified>2025-03-02T23:07:23.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\change.scale-100.png">
       <PackagePath>change.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.213</Modified>
+      <Modified>2025-03-02T23:07:23.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cruz.scale-100.png">
       <PackagePath>cruz.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.210</Modified>
+      <Modified>2025-03-02T23:07:23.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dadobutton.scale-100.png">
       <PackagePath>dadobutton.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.212</Modified>
+      <Modified>2025-03-02T23:07:23.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\diez.scale-100.png">
       <PackagePath>diez.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.211</Modified>
+      <Modified>2025-03-02T23:07:23.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.215</Modified>
+      <Modified>2025-03-02T23:07:23.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.214</Modified>
+      <Modified>2025-03-02T23:07:23.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.214</Modified>
+      <Modified>2025-03-02T23:07:23.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.214</Modified>
+      <Modified>2025-03-02T23:07:23.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.213</Modified>
+      <Modified>2025-03-02T23:07:23.830</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\evolution.scale-100.png">
       <PackagePath>evolution.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.196</Modified>
+      <Modified>2025-03-02T23:07:23.830</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\firstmonster.scale-100.png">
+      <PackagePath>firstmonster.scale-100.png</PackagePath>
+      <Modified>2025-03-02T23:07:23.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lp.scale-100.png">
       <PackagePath>lp.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.212</Modified>
+      <Modified>2025-03-02T23:07:23.799</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\poison.scale-100.png">
       <PackagePath>poison.scale-100.png</PackagePath>
-      <Modified>2025-02-25T22:57:33.195</Modified>
+      <Modified>2025-03-02T23:07:23.800</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\secondmonster.scale-100.png">
+      <PackagePath>secondmonster.scale-100.png</PackagePath>
+      <Modified>2025-03-02T23:07:23.800</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\thirdmonster.scale-100.png">
+      <PackagePath>thirdmonster.scale-100.png</PackagePath>
+      <Modified>2025-03-02T23:07:23.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\LifePointsTCG.deps.json">
       <PackagePath>LifePointsTCG.deps.json</PackagePath>
-      <Modified>2025-03-01T05:41:01.761</Modified>
+      <Modified>2025-03-02T20:34:50.752</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

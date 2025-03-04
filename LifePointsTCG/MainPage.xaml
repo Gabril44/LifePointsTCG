@@ -34,6 +34,7 @@
 
                 <!-- Botones Bench -->
                 <Grid ColumnSpacing="10" HorizontalOptions="Center" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+                    
                     <Button x:Name="Bench1" Clicked="ClickedBench1" WidthRequest="40" HeightRequest="40" CornerRadius="20"
                             BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="0" />
                     <Button x:Name="Bench2" Clicked="ClickedBench2" WidthRequest="40" HeightRequest="40" CornerRadius="20"
@@ -77,7 +78,7 @@
                     </StackLayout>
 
                     <!-- Imagen botnet -->
-                    <Image Source="dotnet_bot.png" HeightRequest="150" Aspect="AspectFit" 
+                    <Image x:Name="MonsterImage"  Source="firstmonster.png" HeightRequest="150" Aspect="AspectFit" 
                            VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" />
 
                     <!-- Botónes a la derecha -->
