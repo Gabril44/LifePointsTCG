@@ -16,6 +16,7 @@ namespace LifePointsTCG
         public int isPoisoned { get; set; }
         public int isBurned { get; set; }
         public int evolutionState { get; set; }
+        public string name { get; set; }
         
         public Monster(int vida_original) 
         {
@@ -27,6 +28,7 @@ namespace LifePointsTCG
             isPoisoned = 0;
             isBurned = 0;
             evolutionState = 0;
+            this.name = "";
         }
     }
 }

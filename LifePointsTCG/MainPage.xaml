@@ -15,12 +15,37 @@
             AbsoluteLayout.LayoutFlags="All" />
 
         <ScrollView>
-            <VerticalStackLayout Padding="30,0" Spacing="25">
-
+            <VerticalStackLayout Padding="20,0" Spacing="15">
                 <!-- Barra de Vida -->
-                <ProgressBar x:Name="HealthBar" Progress="1.0" HeightRequest="20" WidthRequest="200"
-                             VerticalOptions="Start" HorizontalOptions="Center" BackgroundColor="Black"
-                             ProgressColor="Green" Margin="0,5,0,0" />
+                <Border StrokeThickness="0">
+                    <Border StrokeThickness="2" Stroke="Black" BackgroundColor="#80000000" Padding="10">
+                        <Border.Shadow>
+                            <Shadow Brush="Black" Offset="5,5" Radius="10" Opacity="0.8"/>
+                        </Border.Shadow>
+
+                        <Label x:Name="MonsterNameLabel"
+           Text="Monster Name"
+           FontSize="30"
+           FontAttributes="Bold"
+           TextColor="Gold"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           FontFamily="GoblinOne.ttf#Goblin One"/>
+                    </Border>
+
+                </Border>
+
+                <Grid>
+                    <!-- Imagen de fondo -->
+                    <Image Source="life.png"
+           Aspect="AspectFit"
+           HorizontalOptions="Center"
+           VerticalOptions="Start"
+           HeightRequest="40"/>
+                    <ProgressBar x:Name="HealthBar" Progress="1.0" HeightRequest="5" WidthRequest="180"
+                             VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="Transparent"
+                             ProgressColor="Green" Margin="80,1,0,0" /> 
+                </Grid>
 
                 <Label x:Name="LifeLabel" TextColor="Yellow" FontSize="24" FontAttributes="Bold"
                        HorizontalOptions="Center" />
@@ -33,21 +58,31 @@
 
 
                 <!-- Botones Bench -->
-                <Grid ColumnSpacing="10" HorizontalOptions="Center" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
-                    
+                <Grid ColumnSpacing="10" HorizontalOptions="Center" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" RowDefinitions="Auto,Auto">
+
+                    <!-- Labels arriba de los botones -->
+                    <Label x:Name="LabelBench1" Text="Bench 1" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Label x:Name="LabelBench2" Text="Bench 2" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="1"/>
+                    <Label x:Name="LabelBench3" Text="Bench 3" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="2"/>
+                    <Label x:Name="LabelBench4" Text="Bench 4" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="3"/>
+                    <Label x:Name="LabelBench5" Text="Bench 5" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="4"/>
+                    <Label x:Name="LabelBench6" Text="Bench 6" TextColor="Gray" FontSize="12" HorizontalOptions="Center" Grid.Row="0" Grid.Column="5"/>
+
+                    <!-- Botones en la segunda fila -->
                     <Button x:Name="Bench1" Clicked="ClickedBench1" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="0" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="0"/>
                     <Button x:Name="Bench2" Clicked="ClickedBench2" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="1" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="1"/>
                     <Button x:Name="Bench3" Clicked="ClickedBench3" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="2" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="2"/>
                     <Button x:Name="Bench4" Clicked="ClickedBench4" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="3" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="3"/>
                     <Button x:Name="Bench5" Clicked="ClickedBench5" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="4" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="4"/>
                     <Button x:Name="Bench6" Clicked="ClickedBench6" WidthRequest="40" HeightRequest="40" CornerRadius="20"
-                            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Column="5" />
+            BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" Grid.Row="1" Grid.Column="5"/>
                 </Grid>
+
 
                 <!-- Sección de botones y botnet -->
                 <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="Auto" ColumnSpacing="10" VerticalOptions="Center">
@@ -77,9 +112,9 @@
                                 CornerRadius="30" BackgroundColor="Transparent" BorderColor="Gray" BorderWidth="2" />
                     </StackLayout>
 
-                    <!-- Imagen botnet -->
-                    <Image x:Name="MonsterImage"  Source="firstmonster.png" HeightRequest="150" Aspect="AspectFit" 
-                           VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" />
+                    <!-- Imagen monstruo -->
+                    <Image x:Name="MonsterImage" Source="lupierdbase.png" HeightRequest="150" Aspect="AspectFit" 
+                           VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1"/>
 
                     <!-- Botónes a la derecha -->
 

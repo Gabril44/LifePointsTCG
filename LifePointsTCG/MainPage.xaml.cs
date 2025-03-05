@@ -9,7 +9,7 @@
         List<Monster> bench;
         private int monstruoActual = 0;
 
-        public MainPage(int vida)
+        public MainPage(string nombre, int vida)
         {
             InitializeComponent();
             bench = new List<Monster>();
@@ -21,6 +21,7 @@
             firstMonster = new Monster(vida);
             bench[0] = firstMonster;
             bench[0].exists = true;
+            bench[0].name = nombre;
             HealthBar.Progress = 1.0;
             LifeLabel.Text = $"{vida}";
             LifeLabel.TextColor = Colors.Yellow;
@@ -32,8 +33,8 @@
             healsound = new AudioPlayerService("heal.mp3");
             evolution = new AudioPlayerService("evolution.mp3");
             Bench1.BackgroundColor = Colors.Red;
-
-
+            MonsterNameLabel.Text = bench[0].name;
+            LabelBench1.Text = bench[0].name;
 
         }
 
@@ -363,6 +364,19 @@
 
         }
 
+        private void ActualizarNombres() 
+        {
+            switch (monstruoActual) 
+            {
+                case 0: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench1.Text = bench[monstruoActual].name; break;
+                case 1: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench2.Text = bench[monstruoActual].name; break;
+                case 2: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench3.Text = bench[monstruoActual].name; break;
+                case 3: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench4.Text = bench[monstruoActual].name; break;
+                case 4: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench5.Text = bench[monstruoActual].name; break;
+                case 5: MonsterNameLabel.Text = bench[monstruoActual].name; LabelBench6.Text = bench[monstruoActual].name; break;
+            }
+        }
+
         private async void OnEvolutionClicked(object sender, EventArgs e)
         {
             if (sender is Button button)
@@ -373,56 +387,75 @@
                 await button.ScaleTo(originalScale, 100); // Volver al tamaño original
             }
 
-
+            // Solicitar la nueva vida máxima
             string result = await DisplayPromptAsync("Evolución", "Ingrese la vida máxima de la evolución:", "OK", "Cancel", "Ej: 120", keyboard: Keyboard.Numeric);
 
-            if (int.TryParse(result, out int nuevaVidaMaxima) && nuevaVidaMaxima > 0)
-            {
-                bench[monstruoActual].vida_original = nuevaVidaMaxima;
-                int vidaActual = Math.Max(nuevaVidaMaxima - bench[monstruoActual].damageRecived, 0);
-                bench[monstruoActual].vida = vidaActual;
-                HealthBar.Progress = (double)vidaActual / nuevaVidaMaxima;
-                LifeLabel.Text = $"{vidaActual}";
-
-                await DisplayAlert("Evolución!", $"Tu Pokémon ha evolucionado. Nueva vida: {vidaActual}/{nuevaVidaMaxima}", "Aceptar");
-                evolution.Play();
-
-                // Animación de desvanecimiento
-                await MonsterImage.FadeTo(0, 300);
-                await MonsterImage.ScaleTo(0.8, 300); // Se hace un poco más pequeño
-
-                if (bench[monstruoActual].evolutionState == 0)
-                {
-                    MonsterImage.Source = "secondmonster.png";
-                    bench[monstruoActual].evolutionState = 1;
-                } else if(bench[monstruoActual].evolutionState == 1) 
-                {
-                    MonsterImage.Source = "thirdmonster.png";
-                    bench[monstruoActual].evolutionState = 2;
-                }
-
-                // Animación de aparición con escala de impacto
-                await MonsterImage.ScaleTo(1.2, 300); // Se agranda un poco
-                await MonsterImage.FadeTo(1, 300);
-                await MonsterImage.ScaleTo(1.0, 200); // Vuelve a su tamaño normal
-            }
-            else
+            if (!int.TryParse(result, out int nuevaVidaMaxima) || nuevaVidaMaxima <= 0)
             {
                 await DisplayAlert("Error", "Ingrese un valor válido.", "OK");
+                return;
             }
+
+            // Lista de nombres de ejemplo para la evolución
+            string[] ejemplos = { "Titanfang", "Shadowbeast", "Drakor", "Infernodon", "Zyronix" };
+            Random random = new Random();
+            string ejemploNombre = ejemplos[random.Next(ejemplos.Length)];
+
+            // Solicitar el nuevo nombre de la evolución
+            string nuevoNombre = await DisplayPromptAsync("Evolución",
+                $"Tu monstruo ha evolucionado! Ingresa un nuevo nombre (Ejemplo: {ejemploNombre}):", "OK", "Cancelar");
+
+            if (string.IsNullOrWhiteSpace(nuevoNombre))
+            {
+                await DisplayAlert("Error", "Debes ingresar un nombre.", "OK");
+                return;
+            }
+
+            // Aplicar los cambios de evolución
+            bench[monstruoActual].vida_original = nuevaVidaMaxima;
+            bench[monstruoActual].vida = Math.Max(nuevaVidaMaxima - bench[monstruoActual].damageRecived, 0);
+            bench[monstruoActual].name = nuevoNombre; // Asignar el nuevo nombre
+            HealthBar.Progress = (double)bench[monstruoActual].vida / nuevaVidaMaxima;
+            LifeLabel.Text = $"{bench[monstruoActual].vida}";
+
+            await DisplayAlert("Evolución!", $"¡Ha evolucionado en: {nuevoNombre}! Nueva vida: {bench[monstruoActual].vida}/{nuevaVidaMaxima}", "Aceptar");
+
+            evolution.Play();
+
+            // Animación de evolución
+            await MonsterImage.FadeTo(0, 300);
+            await MonsterImage.ScaleTo(0.8, 300);
+
+            if (bench[monstruoActual].evolutionState == 0)
+            {
+                MonsterImage.Source = "lupierdevol.png";
+                bench[monstruoActual].evolutionState = 1;
+                MonsterImage.HeightRequest = 180;
+            }
+            else if (bench[monstruoActual].evolutionState == 1)
+            {
+                MonsterImage.Source = "lupierdmaxevol.png";
+                bench[monstruoActual].evolutionState = 2;
+                MonsterImage.HeightRequest = 250;
+            }
+
+            await MonsterImage.ScaleTo(1.2, 300);
+            await MonsterImage.FadeTo(1, 300);
+            await MonsterImage.ScaleTo(1.0, 200);
 
             UpdateHealthBarColor();
             LiberarMonstruo();
-
+            ActualizarNombres();
         }
+
 
         private void TestEvolution() 
         {
             switch (bench[monstruoActual].evolutionState) 
             {
-                case 0: MonsterImage.Source = "firstmonster.png"; break;
-                case 1: MonsterImage.Source = "secondmonster.png"; break;
-                case 2: MonsterImage.Source = "thirdmonster.png"; break;
+                case 0: MonsterImage.Source = "firstmonster.png"; MonsterImage.HeightRequest = 150; break;
+                case 1: MonsterImage.Source = "secondmonster.png"; MonsterImage.HeightRequest = 180; break;
+                case 2: MonsterImage.Source = "thirdmonster.png"; MonsterImage.HeightRequest = 250; break;
             }
         }
 
@@ -445,6 +478,13 @@
             }
             if (bench[2].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -452,12 +492,15 @@
                     await DisplayAlert("Error", "Ingresa un número válido.", "Aceptar");
                     return;
                 }
+
                 Monster newMonster = new Monster(newLife);
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[2] = newMonster;
                 bench[2].exists = true;
+                bench[2].name = monsterName;
                 Bench3.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench3.Text = bench[2].name;
             }
             else if (bench[2].exists == true)
             {
@@ -487,6 +530,7 @@
                 monstruoActual = 2;
                 ActualizarBotonSeleccionado();
                 TestEvolution();
+                MonsterNameLabel.Text = bench[2].name;
             }
         }
         private async void ClickedBench2(object sender, EventArgs e)
@@ -508,6 +552,13 @@
             }
             if (bench[1].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -520,8 +571,10 @@
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[1] = newMonster;
                 bench[1].exists = true;
+                bench[1].name = monsterName;
                 Bench2.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench2.Text = bench[1].name;
             }
             else if (bench[1].exists == true)
             {
@@ -552,6 +605,7 @@
                 ActualizarBotonSeleccionado();
                 //Bench2.BackgroundColor = Colors.Grey;
                 TestEvolution();
+                MonsterNameLabel.Text = bench[1].name;
             }
         }
 
@@ -577,6 +631,13 @@
 
             if (bench[0].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -589,8 +650,10 @@
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[0] = newMonster;
                 bench[0].exists = true;
+                bench[0].name = monsterName;
                 Bench1.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench1.Text = bench[0].name;
             } 
             else if (bench[0].exists == true)
             {
@@ -621,6 +684,7 @@
                 ActualizarBotonSeleccionado();
                 //Bench1.BackgroundColor = Colors.Grey;
                 TestEvolution();
+                MonsterNameLabel.Text = bench[0].name;
             }
         }
         private async void ClickedBench4(object sender, EventArgs e)
@@ -642,6 +706,13 @@
             }
             if (bench[3].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -654,8 +725,10 @@
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[3] = newMonster;
                 bench[3].exists = true;
+                bench[3].name = monsterName;
                 Bench4.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench4.Text = bench[3].name;
             }
             else if (bench[3].exists == true)
             {
@@ -686,6 +759,7 @@
                 ActualizarBotonSeleccionado();
                 //Bench4.BackgroundColor = Colors.Grey;
                 TestEvolution();
+                MonsterNameLabel.Text = bench[3].name;
             }
         }
         private async void ClickedBench5(object sender, EventArgs e)
@@ -707,6 +781,13 @@
             }
             if (bench[4].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -719,8 +800,10 @@
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[4] = newMonster;
                 bench[4].exists = true;
+                bench[4].name = monsterName;
                 Bench5.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench5.Text = bench[4].name;
             }
             else if (bench[4].exists == true)
             {
@@ -751,6 +834,7 @@
                 ActualizarBotonSeleccionado();
                 //Bench5.BackgroundColor = Colors.Grey;
                 TestEvolution();
+                MonsterNameLabel.Text = bench[4].name;
             }
         }
         private async void ClickedBench6(object sender, EventArgs e)
@@ -774,6 +858,13 @@
 
             if (bench[5].exists == false)
             {
+                string monsterName = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa el nombre (Ejemplo: Terrakion):", "OK", "Cancelar");
+
+                if (string.IsNullOrWhiteSpace(monsterName))
+                {
+                    await DisplayAlert("Error", "Ingresa un nombre válido.", "Aceptar");
+                    return;
+                }
                 string result = await DisplayPromptAsync("Nuevo Monstruo!", "Ingresa la cantidad de vida:", "OK", "Cancelar", keyboard: Keyboard.Numeric);
 
                 if (!int.TryParse(result, out int newLife) || newLife <= 0)
@@ -786,8 +877,10 @@
                 await DisplayAlert("Vida Establecida", $"La vida del monstruo es {newLife} puntos.", "Aceptar");
                 bench[5] = newMonster;
                 bench[5].exists = true;
+                bench[5].name = monsterName;
                 Bench6.BackgroundColor = Colors.Red;
                 ActualizarBotonSeleccionado();
+                LabelBench6.Text = bench[5].name;
             }
             else if (bench[5].exists == true)
             {
@@ -818,6 +911,7 @@
                 ActualizarBotonSeleccionado();
                 //Bench6.BackgroundColor = Colors.Grey;
                 TestEvolution();
+                MonsterNameLabel.Text = bench[5].name;
             }
         }
 
@@ -1152,6 +1246,12 @@
             }
             ApplyDamage(30);
         }
+
+        private async void OnTestBtnClicked(object sender, EventArgs e) 
+        {
+            await DisplayAlert("Nombre!", "El nombre de tu monstruo es: " + bench[monstruoActual].name, "Aceptar");
+        }
+
 
     }
 }

@@ -244,8 +244,20 @@
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\firstmonster.scale-100.png">
       <PackagePath>firstmonster.scale-100.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\life.scale-100.png">
+      <PackagePath>life.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lp.scale-100.png">
       <PackagePath>lp.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lupierdbase.scale-100.png">
+      <PackagePath>lupierdbase.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lupierdevol.scale-100.png">
+      <PackagePath>lupierdevol.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lupierdmaxevol.scale-100.png">
+      <PackagePath>lupierdmaxevol.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ASUS\source\repos\LifePointsTCG\LifePointsTCG\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\poison.scale-100.png">
       <PackagePath>poison.scale-100.png</PackagePath>

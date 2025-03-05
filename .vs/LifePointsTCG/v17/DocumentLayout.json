@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{964688C6-E00D-4D80-82FF-995AABDBF0D5}|LifePointsTCG\\LifePointsTCG.csproj|solutionrelative:lifepointstcg\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{964688C6-E00D-4D80-82FF-995AABDBF0D5}|LifePointsTCG\\LifePointsTCG.csproj|c:\\users\\asus\\source\\repos\\lifepointstcg\\lifepointstcg\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{964688C6-E00D-4D80-82FF-995AABDBF0D5}|LifePointsTCG\\LifePointsTCG.csproj|solutionrelative:lifepointstcg\\welcome.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{964688C6-E00D-4D80-82FF-995AABDBF0D5}|LifePointsTCG\\LifePointsTCG.csproj|c:\\users\\asus\\source\\repos\\lifepointstcg\\lifepointstcg\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{964688C6-E00D-4D80-82FF-995AABDBF0D5}|LifePointsTCG\\LifePointsTCG.csproj|solutionrelative:lifepointstcg\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,35 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Welcome.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Welcome.xaml.cs",
-              "RelativeDocumentMoniker": "LifePointsTCG\\Welcome.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Welcome.xaml.cs",
-              "RelativeToolTip": "LifePointsTCG\\Welcome.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBsAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T00:57:05.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Monster.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Monster.cs",
-              "RelativeDocumentMoniker": "LifePointsTCG\\Monster.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Monster.cs",
-              "RelativeToolTip": "LifePointsTCG\\Monster.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T23:10:11.457Z"
             },
             {
               "$type": "Document",
@@ -64,22 +36,35 @@
               "RelativeDocumentMoniker": "LifePointsTCG\\MainPage.xaml.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\MainPage.xaml.cs",
               "RelativeToolTip": "LifePointsTCG\\MainPage.xaml.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAMwPAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAKUBAAAAAAAAAAAqwMkBAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T20:29:17.229Z",
+              "WhenOpened": "2025-03-04T15:56:50.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\MainPage.xaml",
               "RelativeDocumentMoniker": "LifePointsTCG\\MainPage.xaml",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\MainPage.xaml",
               "RelativeToolTip": "LifePointsTCG\\MainPage.xaml",
-              "ViewState": "AgIAAC0AAAAAAAAAAIBpwE8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHMAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-02T20:14:16.401Z",
+              "WhenOpened": "2025-03-04T15:55:14.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Monster.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Monster.cs",
+              "RelativeDocumentMoniker": "LifePointsTCG\\Monster.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\LifePointsTCG\\LifePointsTCG\\Monster.cs",
+              "RelativeToolTip": "LifePointsTCG\\Monster.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T23:10:11.457Z",
               "EditorCaption": ""
             }
           ]
